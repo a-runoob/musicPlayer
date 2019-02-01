@@ -1,0 +1,13 @@
+<view class="container">
+  <view wx:if="{{nosong}}" class='nosong'>本地暂无收藏</view>
+  <!-- <view class="likeSongs" wx:for="{{collect}}" wx:for-item="song" wx:key="song">
+    <image bindtap='playLike' id="{{song.songID}}" src="{{song.songImg}}"></image>
+    <view class="songName">{{song.songName}}</view>
+    <view class="songAuthor">{{song.songAuthor}}</view>
+  </view> -->
+  <view class="likeSongs" wx:for="{{songs}}" wx:for-item="song" wx:key="song">
+    <image bindtap='playLike' id="{{song.songID}}" src="{{song.songImg}}"></image>
+    <view class="songName">：{{song.songName}}</view>
+    <view class="songAuthor">{{song.songAuthor}}</view>
+  </view>
+</view>

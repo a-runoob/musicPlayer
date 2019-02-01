@@ -1,0 +1,41 @@
+.container {
+  text-align: center;
+}
+.container>view {
+  padding: 10rpx 0;
+  text-align: center;
+}
+image {
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 50%;
+  animation: play 4s linear infinite;
+  animation-play-state: paused;
+}
+#action1 button {
+  display: inline-block;
+  margin: 4rpx;
+  width:18%;
+
+}
+#action2 button {
+  display: inline-block;
+  margin: 5rpx;
+  width:36%;
+}
+#action3 button {
+  margin:60rpx auto;
+  width: 70%;
+  border-radius: 10rpx;
+}
+audio {
+  display: hidden;
+}
+@keyframes play {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

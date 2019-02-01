@@ -1,0 +1,24 @@
+<view class='container'>
+  <view id="songName">{{songName}}</view>
+  <view id="songAuthor">{{songAuthor}}</view>
+  <image src="{{songImg}}" style="animation-play-state:{{playState}}"></image>
+  <view id="action1">
+    <!-- 喜欢的事件处理，通过条件渲染来做到 -->
+    <button wx:if="{{like}}" bindtap='cancelLike' id='{{songID}}'>😍</button>
+    <button bindtap='audioLike' wx:else>喜欢</button>
+    <!-- 喜欢的事件处理，通过条件渲染来做到 -->
+    <button bindtap="playAudio">播放</button>
+    <button bindtap="pauseAudio">暂停</button>
+    <button bindtap='replayAudio'>重播</button>
+  </view>
+  <view id="action2">
+    <button bindtap='prevSong'>上一首</button>
+    <button bindtap="nextSong">下一首</button>
+  </view>
+  <view>
+    <audio id="myAudio" src="{{songUrl}}" poster="{{songImg}}" name="{{songName}}" author="{{songAuthor}}" action="{{audioAction}}" bindplay="audioPlayed" bindtimeupdate="audioTimeUpdated" controls></audio>
+  </view>
+  <view id="action3">
+    <button bindtap='toLike'>我的收藏</button>
+  </view>
+</view>

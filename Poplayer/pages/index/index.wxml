@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container" id="index">
+  <image id="icon" src="../../resource/imgs/logo.png" style="top:{{iconTop}}" bindtap='bindadduser'></image>
+  <!-- <image id="icon" src="../../resource/imgs/icon.png"></image> -->
+  <button id="toPlay" bindtap='toPlay' style="bottom:{{btnBottom}}">立即体验</button>
+  <!-- <image id="cover" src="{{coverImg}}" mode='aspectFill'></image> -->
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindgetUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view> 
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
+    </block>
+  </view>
+  <image id="cover" src="../../resource/imgs/cimg3.jpg" mode='aspectFill'></image>
+</view>

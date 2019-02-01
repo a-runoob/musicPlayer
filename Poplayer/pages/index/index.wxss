@@ -1,0 +1,38 @@
+/**index.wxss**/
+#toPlay {
+  transition: bottom 1s;
+  position: fixed;
+  width: 300rpx;
+  height: 100rpx;
+  margin: 0 225rpx;
+  display: inline-block;
+  line-height: 100rpx;
+}
+#cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#icon {
+  transition: top 1s;
+  width: 250rpx;
+  height: 250rpx;
+  position: fixed;
+  /* top: 500rpx; */
+  margin: 0 250rpx;
+}
+.userinfo {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  top: 50%;
+}
+.userinfo image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+.userinfo button {
+  width: 300rpx;
+  height: 100rpx;
+}

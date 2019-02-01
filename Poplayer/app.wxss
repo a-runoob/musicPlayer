@@ -1,0 +1,11 @@
+/**app.wxss**/
+page {
+  display: block;
+  height: 100%;
+  background-color: pink;
+}
+.container {
+  display: block;
+  height: 100%;
+  background-color: pink;
+} 
